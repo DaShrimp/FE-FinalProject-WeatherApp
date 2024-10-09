@@ -16,17 +16,20 @@
     <div class="MainBody">
         <div class="MainPart">
             <div class="InputGroup">
-                <input type="text" id="search" placeholder="Search by city or Postcode" />
-                <select class="TempConvert" id="Converter">
+                <input type="text" id="Search" placeholder="Search by city or Postcode" />
+                <select class="TempConvert" id="TempConverter">
                     <option>°C</option>
                     <option>°F</option>
                 </select>
-                <i class="fa fa-search"></i>
+                <i class="fa fa-search" onclick="findLocation()"></i>
             </div>
-            <div class="WeatherIcon" src=".../asset/weather"></div>
-            <h1 class="Temp">Temp num</h1>
-            <h2 class="CityName">cityname</h2>
-            <h2 class="Today">Today</h2>
+            <div class="WeatherIcon"></div>
+            <h2 class="Temp"></h2>
+            <div class="Feelslike"></div>
+            <div class="Describe"></div>
+            <hr />
+            <div class="Date"></div>
+            <div class="CityName"></div>
         </div>
         <div class="DetailedPart">
             <h2 class="Heading">Today's Highlight</h2>
@@ -71,14 +74,14 @@
 
                 <div class="Pressure">
                     Pressure
-                    <i class="fa-solid fa-volcon"></i>
+                    <i class="fa-solid fa-volcano"></i>
                     <h1 id="PressNum"></h1>
                 </div>
             </div>
 
             <br />
             <h2 class="Heading">This Week</h2>
-
+            <div class="Forecast"></div>
 
         </div>>
 </body>
