@@ -1,0 +1,67 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.MainBody {
+    display: flex;
+    align-items: center;
+}
+
+.MainPart {
+    width: 40%;
+    position: fixed;
+    inset: 0;
+    background: #78c1f3;
+    padding: 1rem 2.5rem;
+}
+
+.InputGroup {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.InputGroup input {
+    background: #ffffff;
+    text-transform: capitalize;
+    padding: 1rem;
+    font-size: 15px;
+    border-radius: 6px;
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.InputGroup .TempConvert {
+    position: absolute;
+    right: 45px;
+    outline: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.InputGroup .fa-search {
+    position: absolute;
+    right: 15px;
+    color: #909090;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.DetailedPart {
+    width: 60%;
+    position: fixed;
+    inset: 0;
+    margin-left: 40%;
+    padding: 2rem;
+    background: #ffffff;
+    overflow: auto;
+}

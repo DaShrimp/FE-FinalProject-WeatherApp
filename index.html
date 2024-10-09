@@ -4,61 +4,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Wheather app</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="script.js"></script>
 </head>
 
 <body>
-    <nav class="NavigationBar">
-        <img src="../asset/..">
-        <ul class="NavList">
-            <li>Home</li>
-            <li></li>
-            <li></li>
-            <li>About us</li>
-        </ul>
-        <input type="search" placeholder="Nhap tên Thành phố hoặc Mã Post">
-    </nav>
     <div class="MainBody">
-        <div class="SidePanel">
-            <div class="MainPart">
-                <img class="WeatherIcon" src=".../asset/weather">
-                <h1 class="Temp">Temp num</h1>
-                <h2 class="CityName">cityname</h2>
-                <h2 class="Today">Today</h2>
+        <div class="MainPart">
+            <div class="InputGroup">
+                <input type="text" id="search" placeholder="Search by city or Postcode" />
+                <select class="TempConvert" id="Converter">
+                    <option>°C</option>
+                    <option>°F</option>
+                </select>
+                <i class="fa fa-search"></i>
             </div>
-            <div class="Others">
-                <img class="WindFlow" src=".../asset/wind">
-                <h1 class="Wind">Wind num</h1>
-
-                <img class="Huminity" src=".../asset/humit">
-                <h1 class="Humit">Humit num</h1>
-            </div>
+            <div class="WeatherIcon" src=".../asset/weather"></div>
+            <h1 class="Temp">Temp num</h1>
+            <h2 class="CityName">cityname</h2>
+            <h2 class="Today">Today</h2>
         </div>
-        <div class="DetailedPanel">
-            <div class="TodayHighlight">
-                <ul class="SquareInfo">
-                    <li>Huminity</li>
-                    <li>Huminity</li>
-                    <li>Huminity</li>
-                    <li>Huminity</li>
-                    <li>Huminity</li>
-                    <li>Huminity</li>
-                </ul>
+        <div class="DetailedPart">
+            <h2 class="Heading">Today's Highlight</h2>
+            <div class="Highlights">
+
+                <div class="Huminity">
+                    Huminity
+                    <i class="fa-solid fa-water"></i>
+                    <h1 id="HumitNum"></h1>
+                </div>
+
+                <div class="WindSpeed">
+                    Wind speed
+                    <i class="fa-solid fa-wind"></i>
+                    <h1 id="windNum"></h1>
+                </div>
+
+                <div class="Sun">
+                    <span>
+                        <i class="fa-solid fa-sun"></i>
+                        <p><span id="SunRiseNum"></span>Sunrise</p>
+                    </span>
+
+                    <span>
+                        <i class="fa-regular fa-sun"></i>
+                        <p><span id="SunSetNum"></span>Sunset</p>
+                    </span>
+
+                </div>
+
+                <div class="Clouds">
+                    Clouds
+                    <i class="fa-solid fa-cloud"></i>
+                    <h1 id="CloudNum"></h1>
+                </div>
+
+                <div class="UVRate">
+                    UV rate
+                    <i class="fa-solid fa-bacon"></i>
+                    <h1 id="UVNum"></h1>
+                </div>
+
+                <div class="Pressure">
+                    Pressure
+                    <i class="fa-solid fa-volcon"></i>
+                    <h1 id="PressNum"></h1>
+                </div>
             </div>
 
-            <div class="ThisWeekSum">
-                <ul class="SquareInfo">
-                    <li>Mon</li>
-                    <li>Tue</li>
-                    <li>Wed</li>
-                    <li>Thu</li>
-                    <li>Fri</li>
-                    <li>Sat</li>
-                    <li>Sun</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+            <br />
+            <h2 class="Heading">This Week</h2>
+
+
+        </div>>
 </body>
 
 </html>
