@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
+    font-family: "Montserrat";
     box-sizing: border-box;
 }
 
@@ -14,82 +17,79 @@ body {
 }
 
 .MainPart {
-    width: 40%;
+    width: 25%;
     position: fixed;
     inset: 0;
-    background: #78c1f3;
+    background: rgb(198, 198, 198);
     padding: 1rem 2.5rem;
 }
-
-.InputGroup {
+.input-group {
     position: relative;
     display: flex;
     align-items: center;
     margin: 2rem 0;
 }
 
-.InputGroup input {
-    background: #ffffff;
-    text-transform: capitalize;
+.input-group input {
+    background: white;
     padding: 1rem;
-    font-size: 15px;
-    border-radius: 6px;
+    font-size:  15px;
     width: 100%;
     outline: none;
     border: none;
+    border-radius: 5px;
 }
 
-.InputGroup .TempConvert {
+.input-group .converter {
     position: absolute;
     right: 45px;
-    outline: none;
     border: none;
-    font-size: 1.5em;
+    outline: none;
+    font-size: 18px;
     cursor: pointer;
 }
 
-.InputGroup .fa-search {
+.input-group .fa-search {
     position: absolute;
     right: 15px;
-    color: #909090;
+    color: black;
     cursor: pointer;
     font-size: 22px;
 }
 
-.DetailedPart {
-    width: 60%;
+.weather-output {
+    width: 100wh;
     position: fixed;
     inset: 0;
-    margin-left: 40%;
+    margin-left: 25%;
     padding: 2rem;
-    background: #ffffff;
+    background: rgb(222, 221, 220);
     overflow: auto;
 }
-
-.Highlights {
+.Highlight {
     display: grid;
     grid-template-columns: repeat(3, 350px);
     grid-auto-flow: row;
     row-gap: 1rem;
     column-gap: 10px;
 }
-
-.Highlights div {
+.Highlight div{
     height: 200px;
     display: grid;
     align-items: center;
     justify-content: center;
-    background-color: #78c1f3;
+    text-align: center;
+    background-color: rgb(198, 198, 198);
     border-radius: 20px;
     padding: 1rem;
 }
 
-.Highlights i {
+.Highlight i{
     font-size: 45px;
 }
 
-.Sun span {
-    align-items: center;
+.sun span {
     display: flex;
+    align-items: center;
     gap: 10px;
 }
