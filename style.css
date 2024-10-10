@@ -11,12 +11,12 @@ body {
     height: 100vh;
 }
 
-.MainBody {
+.container {
     display: flex;
     align-items: center;
 }
 
-.MainPart {
+.weather-input {
     width: 25%;
     position: fixed;
     inset: 0;
