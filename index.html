@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wheather app</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script defer src="script.js"></script>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Weather App</title>
+    <link rel="icon" href="./asset/icon.svg" type="image/png">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
 </head>
-
 <body>
+
     <div class="container">
         <div class="weather-input">
+            <nav>
+                <img src="./asset/White text.svg" alt="logo">
+                <h1>F-CODE</h1>
+            </nav>
             <div class="input-group">
-                <input 
-                    type="text" 
-                    name="" 
-                    id="userLocation" 
-                    placeholder="Search for places..."
-                />
-                
-                <select class="converter" id="converter">
-                    <option value="">°C</option>
-                    <option value="">°F</option>
+                <input type="text" name="" id="userLocation" placeholder="Search for places..." />
+                <select class="converter" id="converter" aria-label="Temperature Unit">
+                    <option value="°C">°C</option>
+                    <option value="°F">°F</option>
                 </select>
-                
-                <i class="fa fa-search"></i>
+
+                <i class="fa fa-search" onclick="findLocation()"></i>
             </div>
-                
-                <div class="weatherIcon">ABC</div>
-                <h2 class="temperature">34°C</h2>
-                <div class="feelslike">ABC</div>
-                <div class="description">ABC</div>
-                <div class="date">ABC</div>
-                <div class="city">ABC</div>
+
+            <div class="weatherIcon"></div>
+            <h2 class="temperature"></h2>
+            <div class="feelsLike"></div>
+            <div class="description"></div>
+            <hr />
+            <div class="date"></div>
+            <div class="city"></div>
         </div>
 
         <div class="weather-output">
@@ -64,7 +65,6 @@
                         <i class="fa-solid fa-sun"></i>
                         <p><span id="SRValue">Sunrise</span></p>
                     </span>
-
                     <span>
                         <i class="fa-regular fa-sun"></i>
                         <p><span id="SSValue">Sunset</span></p>
@@ -94,12 +94,12 @@
             </div>
 
             <!-- BREAK -->
-            <br> 
+            <br>
 
 
             <h2 class="heading">This Week</h2>
+            <div class="Forecast"></div>
         </div>
     </div>
 </body>
-
 </html>

@@ -44,10 +44,12 @@ function findLocation() {
     Forecast.innerHTML = "";
     if (typeof userLocation.value === 'number') {
         fetch(WEATHER_ZIP_ENDPOINT + userLocation.value).then((res) => res.json()).then(data => {
+
             if (data.cod != "" && data.cod != 200) {
                 alert(data.message);
                 return
             }
+
             console.log(data);
             getWeatherData(data);
         });
@@ -58,6 +60,7 @@ function findLocation() {
                 return
             }
             console.log(data);
+
             getWeatherData(data);
         });
     }
@@ -112,7 +115,6 @@ function TempConvert(temp) {
         message = ctof + "<span>" + "\xB0F</span>";
     }
     return message;
-}
 
 converter.addEventListener("change", () => {
     if (userLocation.value) {
