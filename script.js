@@ -44,10 +44,12 @@ function findLocation() {
     Forecast.innerHTML = "";
     if (typeof userLocation.value === 'number') {
         fetch(WEATHER_ZIP_ENDPOINT + userLocation.value).then((res) => res.json()).then(data => {
-            // if (data.cod != "" && data.cod != 200) {
-            //     alert(data.message);
-            //     return
-            // }
+
+            if (data.cod != "" && data.cod != 200) {
+                alert(data.message);
+                return
+            }
+
             console.log(data);
             getWeatherData(data);
         });
@@ -59,8 +61,6 @@ function findLocation() {
             }
             console.log(data);
 
-            // city.innerHTML = data.name + ", " + data.sys.country;
-            // weatherIcon.style.background = `url(https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png)`;
             getWeatherData(data);
         });
     }
@@ -115,4 +115,9 @@ function TempConvert(temp) {
         message = ctof + "<span>" + "\xB0F</span>";
     }
     return message;
-}
+
+converter.addEventListener("change", () => {
+    if (userLocation.value) {
+        findLocation();
+    }
+});
