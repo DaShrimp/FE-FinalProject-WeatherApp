@@ -40,29 +40,6 @@ const
         hour12: true,
     };
 
-function findLocation() {
-    Forecast.innerHTML = "";
-    if (typeof userLocation.value === 'number') {
-        fetch(WEATHER_ZIP_ENDPOINT + userLocation.value).then((res) => res.json()).then(data => {
-            if (data.cod != "" && data.cod != 200) {
-                alert(data.message);
-                return
-            }
-            console.log(data);
-            getWeatherData(data);
-        });
-    } else {
-        fetch(WEATHER_API_ENDPOINT + userLocation.value).then((res) => res.json()).then(data => {
-            if (data.cod != "" && data.cod != 200) {
-                alert(data.message);
-                return
-            }
-            console.log(data);
-            getWeatherData(data);
-        });
-    }
-
-}
 
 function getWeatherData(data) {
 
@@ -95,26 +72,3 @@ function getWeatherData(data) {
         });
     });
 }
-
-function getLongFormatDateTime(dtValue, offSet, options) {
-    const unixTime = dtValue + offSet;
-    const date = new Date(unixTime * 1000);
-    return date.toLocaleString("en-US", { ...options, timeZone: 'UTC' });
-}
-
-function TempConvert(temp) {
-    let tempValue = Math.round(temp);
-    let message = "";
-    if (converter.value == "°C") {
-        message = tempValue + "<span>" + "\xB0C</span>";
-    } else {
-        let ctof = (tempValue * 9) / 5 + 32;
-        message = ctof + "<span>" + "\xB0F</span>";
-    }
-    return message;
-}
-converter.addEventListener("change", () => {
-    if (userLocation.value) {
-        findLocation();
-    }
-});
