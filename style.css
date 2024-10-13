@@ -34,9 +34,9 @@ body{
 }
 
 .weatherIcon { 
-    background-position: 50% inherit;
+    background-position: 50% !important;
     background-repeat: no-repeat !important;
-    background-size: contain;
+    background-size: contain !important;
     display: block;
     height: 25%;
     margin: 2rem auto;
@@ -52,7 +52,7 @@ body{
 .input-group input {
     background: #f8f8f8;
     text-transform: capitalize;
-    padding: 1rem;
+    padding: 1rem 5.5rem 1rem 1rem;
     font-size: 15px;
     border-radius: 6px;
     width: 100%;
@@ -104,7 +104,7 @@ body{
     margin-top: 20px;
 }
 
-.Highlights{
+.Highlight{
     display: grid;
     grid-template-columns: repeat(3, 350px);
     grid-auto-flow: row;
@@ -120,7 +120,7 @@ body{
     column-gap: 10px;
 }
 
-.Highlights div, .Forecast div{
+.Highlight div, .Forecast div{
     height: 200px;
     display: grid;
     align-items: center;
@@ -131,7 +131,7 @@ body{
     padding: 1rem;
 }
 
-.Highlights i {
+.Highlight i {
     font-size: 45px;
 }
 
@@ -167,11 +167,11 @@ body{
         padding: 1rem;
     }
 
-    .Highlights, .Forecast {
+    .Highlight, .Forecast {
         grid-template-columns: 1fr;
     }
 
-    .Highlights div, .Forecast div {
+    .Highlight div, .Forecast div {
         width: 100%;
     }
 
@@ -182,4 +182,74 @@ body{
     .temperature span {
         font-size: 1.5rem;
     }
+}
+
+@media (max-width: 768px) and (min-width: 501px) {
+    .container {
+        flex-direction: column;
+    }
+    .weather-input {
+        width: 100%;
+        position: relative;
+        padding: 1rem;
+    }
+
+    .weather-output {
+        width: 100%;
+        position: relative;
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    .Highlight, .Forecast {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Highlight div, .Forecast div {
+        width: 100%;
+    }
+
+    .temperature {
+        font-size: 4rem;
+    }
+
+    .temperature span {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 1440px) and (min-width: 769px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .weather-input {
+        width: 100%;
+        position: relative;
+        padding: 1rem;
+    }
+
+    .weather-output {
+        width: 100%;
+        position: relative;
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    .Highlight, .Forecast {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Highlight div, .Forecast div {
+        width: 100%;
+    }
+
+    .temperature {
+        font-size: 4rem;
+    }
+
+    .temperature span {
+        font-size: 1.75rem;
+    }
+    
 }
