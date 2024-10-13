@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Montserrat";
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.weather-input {
+    width: 25%;
+    position: fixed;
+    inset: 0;
+    background: rgb(4, 120, 2);
+    padding: 1rem 2.5rem;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
+
+nav img {
+    height: 5em;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 20px;
+}
+
+nav h1 {
+    font-size: 3em;
+    margin: 0 0 0 -40px;
+    display: flex;
+    align-items: center;
+    color: rgb(255, 197, 39);
+}
+
+.weather-input .feelsLike,
+.weather-input .description,
+.weather-input .date,
+.weather-input .city {
+    padding: 10px 0;
+}
+
+.temperature {
+    display: flex;
+    font-size: 5rem;
+    font-weight: 300;
+    text-align: center;
+
+}
+
+.weatherIcon {
+    background-position: 50% !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    display: block;
+    height: 25%;
+    margin: 2rem auto;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.input-group input {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-transform: capitalize;
+    padding: 1rem 5.5rem 1rem 1rem;
+    font-size: 15px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.input-group .converter {
+    position: absolute;
+    right: 45px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.input-group .fa-search {
+    position: absolute;
+    right: 15px;
+    color: rgb(4, 120, 2);
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.weather-output {
+    width: 75%;
+    position: fixed;
+    inset: 0;
+    margin-left: 25%;
+    padding: 2rem;
+    background: rgb(234, 234, 234);
+    overflow: auto;
+}
+
+.Highlight {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    grid-auto-flow: row;
+    column-gap: 2rem;
+    row-gap: 10px;
+}
+
+.Forecast {
+    display: grid;
+    grid-template-columns: repeat(4, 260px);
+    grid-auto-flow: row;
+    row-gap: 1rem;
+    column-gap: 10px;
+}
+
+.Highlight div,
+.Forecast div {
+    height: 200px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(4, 120, 2);
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+.Highlight i {
+    font-size: 45px;
+}
+
+.sun span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width: 500px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .weather-input {
+        width: 100%;
+        position: static;
+        padding: 1rem;
+    }
+
+    .weather-output {
+        width: 100%;
+        position: static;
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    .Highlight {
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+    }
+
+    .Forecast {
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+    }
+
+    nav {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    nav img {
+        margin: 0 auto;
+    }
+
+    nav h1 {
+        margin: 0 auto;
+        font-size: 2em;
+    }
+
+    .temperature {
+        font-size: 3rem;
+    }
+
+    .weatherIcon {
+        height: 20%;
+    }
+
+    .input-group {
+        flex-direction: column; 
+        align-items: stretch;
+    }
+
+    .input-group input {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .input-group .converter{
+        position: absolute;
+        margin: 13px auto;
+    }
+    .input-group .fa-search {
+        position: absolute;
+        margin: 15px auto;
+        
+    }
+}

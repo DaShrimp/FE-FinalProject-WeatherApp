@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Weather App</title>
-    <link rel="icon" href="./asset/icon.svg" type="image/png">
-    <link rel="stylesheet" href="./style.css">
-    <script defer src="./script.js"></script>
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
-    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
-    crossorigin="anonymous" 
-    referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="phone.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="script.js"></script>
 </head>
+
 <body>
 
     <div class="container">
@@ -23,7 +22,7 @@
             </nav>
             <div class="input-group">
                 <input type="text" name="" id="userLocation" placeholder="Search for places..." />
-                <label for="converter">Temperature Unit:</label>
+
                 <select class="converter" id="converter">
                     <option value="°C">°C</option>
                     <option value="°F">°F</option>
@@ -66,6 +65,7 @@
                         <i class="fa-solid fa-sun"></i>
                         <p><span id="SRValue">Sunrise</span></p>
                     </span>
+
                     <span>
                         <i class="fa-regular fa-sun"></i>
                         <p><span id="SSValue">Sunset</span></p>
@@ -103,4 +103,5 @@
         </div>
     </div>
 </body>
+
 </html>
