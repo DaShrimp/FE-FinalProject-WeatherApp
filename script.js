@@ -115,6 +115,7 @@ function TempConvert(temp) {
         message = ctof + "<span>" + "\xB0F</span>";
     }
     return message;
+}
 
 converter.addEventListener("change", () => {
     if (userLocation.value) {
