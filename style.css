@@ -159,12 +159,12 @@ select option {
 }
 
 .weather-output {
-    width: 100%;
+    width: 75%;
     position: fixed;
     inset: 0;
-    margin: 0px 0 10px 30%;
-
+    margin: 0 0 0 25%;
     padding: 2rem;
+    overflow: auto;
 }
 
 .weather-input .feelsLike, .weather-input .description, .weather-input .date, .weather-input .city{
@@ -185,7 +185,7 @@ select option {
 
 .Highlight {
     display: grid;
-    grid-template-columns: repeat(3, 350px);
+    grid-template-columns: repeat(3, 320px);
     grid-auto-flow: row;
     column-gap: 2rem;
     row-gap: 10px;
@@ -208,7 +208,7 @@ select option {
 }
 
 .Highlight div, .Forecast div{
-    height: 180px;
+    height: 200px;
     display: grid;
     align-items: center;
     justify-content: center;
