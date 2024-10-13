@@ -13,77 +13,95 @@
 </head>
 
 <body>
-    <div class="MainBody">
-        <div class="MainPart">
-            <div class="InputGroup">
-                <input type="text" id="Search" placeholder="Search by city or Postcode" />
-                <select class="TempConvert" id="TempConverter">
-                    <option>°C</option>
-                    <option>°F</option>
+
+    <div class="container">
+        <div class="weather-input">
+            <nav>
+                <img src="./asset/White text.svg" alt="logo">
+                <h1>F-CODE</h1>
+            </nav>
+            <div class="input-group">
+                <input type="text" name="" id="userLocation" placeholder="Search for places..." />
+
+                <select class="converter" id="converter">
+                    <option value="°C">°C</option>
+                    <option value="°F">°F</option>
                 </select>
+
                 <i class="fa fa-search" onclick="findLocation()"></i>
             </div>
-            <div class="WeatherIcon"></div>
-            <h2 class="Temp"></h2>
-            <div class="Feelslike"></div>
-            <div class="Describe"></div>
+
+            <div class="weatherIcon"></div>
+            <h2 class="temperature"></h2>
+            <div class="feelsLike"></div>
+            <div class="description"></div>
             <hr />
-            <div class="Date"></div>
-            <div class="CityName"></div>
+            <div class="date"></div>
+            <div class="city"></div>
         </div>
-        <div class="DetailedPart">
-            <h2 class="Heading">Today's Highlight</h2>
-            <div class="Highlights">
 
-                <div class="Huminity">
-                    Huminity
+        <div class="weather-output">
+
+            <h2 class="heading">Today's Highlights</h2>
+            <div class="Highlight">
+
+                <!-- HUMIDITY -->
+                <div class="humidity">
+                    Humidity
                     <i class="fa-solid fa-water"></i>
-                    <h1 id="HumitNum"></h1>
+                    <h1 id="HValue"></h1>
                 </div>
 
-                <div class="WindSpeed">
-                    Wind speed
+                <!-- WIND SPEED -->
+                <div class="wind-speed">
+                    Wind Speed
                     <i class="fa-solid fa-wind"></i>
-                    <h1 id="windNum"></h1>
+                    <h1 id="WValue"></h1>
                 </div>
 
-                <div class="Sun">
+                <!-- SUN -->
+                <div class="sun">
                     <span>
                         <i class="fa-solid fa-sun"></i>
-                        <p><span id="SunRiseNum"></span>Sunrise</p>
+                        <p><span id="SRValue">Sunrise</span></p>
                     </span>
 
                     <span>
                         <i class="fa-regular fa-sun"></i>
-                        <p><span id="SunSetNum"></span>Sunset</p>
+                        <p><span id="SSValue">Sunset</span></p>
                     </span>
-
                 </div>
 
-                <div class="Clouds">
+                <!-- CLOUD -->
+                <div class="clouds">
                     Clouds
                     <i class="fa-solid fa-cloud"></i>
-                    <h1 id="CloudNum"></h1>
+                    <h1 id="CValue"></h1>
                 </div>
 
-                <div class="UVRate">
-                    UV rate
+                <!-- UV INDEX -->
+                <div class="uv-index">
+                    UV Index
                     <i class="fa-solid fa-bacon"></i>
-                    <h1 id="UVNum"></h1>
+                    <h1 id="UVValue"></h1>
                 </div>
 
-                <div class="Pressure">
+                <!-- PRESSURE -->
+                <div class="pressure">
                     Pressure
                     <i class="fa-solid fa-volcano"></i>
-                    <h1 id="PressNum"></h1>
+                    <h1 id="PValue"></h1>
                 </div>
             </div>
 
-            <br />
-            <h2 class="Heading">This Week</h2>
-            <div class="Forecast"></div>
+            <!-- BREAK -->
+            <br>
 
-        </div>>
+
+            <h2 class="heading">This Week</h2>
+            <div class="Forecast"></div>
+        </div>
+    </div>
 </body>
 
 </html>
