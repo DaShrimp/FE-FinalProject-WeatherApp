@@ -344,6 +344,11 @@ select option {
         padding: 1rem;
     }
 
+    .weatherIcon {
+        height: 15em;
+        width: auto;
+    }
+
     nav {
         display: flex;
         justify-content: center;
