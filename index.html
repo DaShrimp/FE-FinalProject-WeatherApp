@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <link rel="icon" href="./asset/icon.svg" type="image/png">
     <link rel="stylesheet" href="./style.css">
     <script defer src="./script.js"></script>
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
-    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
-    crossorigin="anonymous" 
-    referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
 
+<body>
+    <!-- MAIN CONTAINER -->
+    <!-- chua toan bo contentcua page -->
     <div class="container">
+
+        <!-- KHUNG WEATHER CHINH - BEN TRAI -->
         <div class="weather-input">
+
+            <!-- NAV BAR -->
             <nav>
                 <img src="./asset/White text.svg" alt="logo">
                 <h1>F-CODE</h1>
             </nav>
+
+            <!-- KHUNG INPUT -->
             <div class="input-group">
                 <input type="text" name="" id="userLocation" placeholder="Search for places..." />
+
+                <!-- CHUYEN LOAI C HOAC F -->
                 <select class="converter" id="converter" aria-label="Temperature Unit">
                     <option value="°C">°C</option>
                     <option value="°F">°F</option>
                 </select>
-
+                <!-- KINH LUP -->
                 <i class="fa fa-search" onclick="findLocation()"></i>
             </div>
 
+            <!-- THONG TIN THOI THIET -->
             <div class="weatherIcon"></div>
             <h2 class="temperature"></h2>
             <div class="feelsLike"></div>
@@ -40,6 +50,7 @@
             <div class="city"></div>
         </div>
 
+        <!-- KHUNG HIGHLIGHT CAC THONG TIN LIEN QUAN -->
         <div class="weather-output">
 
             <h2 class="heading">Today's Highlights</h2>
@@ -96,10 +107,12 @@
             <!-- BREAK -->
             <br>
 
-
+            <!-- THIS WEEK CREATE  -->
             <h2 class="heading">This Week</h2>
+            <!-- FORCAST DC ADD THEM BANG JAVASCRIPT -->
             <div class="Forecast"></div>
         </div>
     </div>
 </body>
+
 </html>

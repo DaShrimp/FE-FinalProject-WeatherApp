@@ -1,3 +1,4 @@
+/*__________ D E F A U L T - R E S P O S I V E__________*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
@@ -16,7 +17,7 @@
     border-radius: 10px;
 }
 
-body{
+body {
     color: white;
     background: url('./asset/blur_background.jpg');
     height: 100vh;
@@ -26,13 +27,15 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
 body::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100vh;
-    background: rgb(0,  0, 0, 0.15);
-    -webkit-backdrop-filter: blur(15px); /*For Safari*/
+    background: rgb(0, 0, 0, 0.15);
+    -webkit-backdrop-filter: blur(15px);
+    /*For Safari*/
     backdrop-filter: blur(15px);
 }
 
@@ -44,16 +47,15 @@ body::before {
 .weather-input {
     width: 25%;
     position: fixed;
-    inset:0;
-    background: linear-gradient(
-        to top, rgb(0, 0, 0, 0.15),
-        rgb(255, 255, 255, 0.15));
+    inset: 0;
+    background: linear-gradient(to top, rgb(0, 0, 0, 0.15),
+            rgb(255, 255, 255, 0.15));
     margin: 20px;
     border-radius: 12px;
     padding: 1rem 2.5rem;
 }
 
-.weatherIcon { 
+.weatherIcon {
     background-position: 50% !important;
     background-repeat: no-repeat !important;
     background-size: contain !important;
@@ -113,14 +115,14 @@ nav h1 {
     align-items: center;
     border: 3px solid transparent;
     margin: 2rem 0;
-    outline:  none;
+    outline: none;
     font-weight: 500;
     transition: 0.25s border;
 }
 
 .input-group input {
     color: white;
-    background: rgb(0,  0, 0, 0.15);
+    background: rgb(0, 0, 0, 0.15);
     text-transform: capitalize;
     padding: 1rem 5.5rem 1rem 1rem;
     font-size: 15px;
@@ -167,18 +169,21 @@ select option {
     overflow: auto;
 }
 
-.weather-input .feelsLike, .weather-input .description, .weather-input .date, .weather-input .city{
+.weather-input .feelsLike,
+.weather-input .description,
+.weather-input .date,
+.weather-input .city {
     padding: 10px;
 }
 
-.temperature{
+.temperature {
     display: flex;
     font-size: 5rem;
     font-weight: 300;
     text-align: center;
 }
 
-.temperature span{
+.temperature span {
     font-size: 2rem;
     margin-top: 20px;
 }
@@ -199,7 +204,7 @@ select option {
     column-gap: 10px;
 }
 
-.Forecast{
+.Forecast {
     display: grid;
     grid-template-columns: repeat(4, 260px);
     grid-auto-flow: row;
@@ -207,15 +212,16 @@ select option {
     column-gap: 10px;
 }
 
-.Highlight div, .Forecast div{
+.Highlight div,
+.Forecast div {
     height: 200px;
     display: grid;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(
-        to top, rgb(0, 0, 0, 0.15),
-        rgb(255, 255, 255, 0.15));;
+    background: linear-gradient(to top, rgb(0, 0, 0, 0.15),
+            rgb(255, 255, 255, 0.15));
+    ;
     border-radius: 20px;
     padding: 1rem;
 }
@@ -241,6 +247,7 @@ select option {
 }
 
 /* Author Phuc */
+/*__________ P H O N E - R E S P O S I V E__________*/
 @media (max-width: 500px) {
     .container {
         flex-direction: column;
@@ -263,7 +270,8 @@ select option {
         position: relative;
         margin-left: 0;
         padding: 1rem;
-        -webkit-backdrop-filter: blur(15px); /*For Safari*/
+        -webkit-backdrop-filter: blur(15px);
+        /*For Safari*/
         backdrop-filter: blur(15px);
 
     }
@@ -301,7 +309,7 @@ select option {
     }
 
     .input-group {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: stretch;
     }
 
@@ -310,18 +318,20 @@ select option {
         margin-bottom: 1rem;
     }
 
-    .input-group .converter{
+    .input-group .converter {
         position: absolute;
         margin: 13px auto;
     }
+
     .input-group .fa-search {
         position: absolute;
         margin: 15px auto;
-        
+
     }
 }
 
 /* Author Minh */
+/*__________ T A B L E T - R E S P O S I V E__________*/
 @media (max-width: 1400px) and (min-width: 501px) {
     .container {
         display: flex;
@@ -362,7 +372,8 @@ select option {
         position: relative;
         margin-left: 0;
         padding: 1rem;
-        -webkit-backdrop-filter: blur(15px); /*For Safari*/
+        -webkit-backdrop-filter: blur(15px);
+        /*For Safari*/
         backdrop-filter: blur(15px);
     }
 
@@ -384,4 +395,3 @@ select option {
         font-size: 1.75rem;
     }
 }
-
